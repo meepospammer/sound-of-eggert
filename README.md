@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Inital Sound of Eggert commit
+
+this project is the inital fork of the create next app boilerplate for development of Sound of Eggert 35L project
+
+Next js allows react patterns from client to server allowing for flexible data modeling and data fetching.
+`
 ## Getting Started
 
 First, run the development server:
@@ -32,3 +38,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+

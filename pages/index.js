@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -11,33 +13,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+      <main>
+        <h1 className="title page">
+        <Link href='tracklists/graduation'>
+           Check out our favorite albums!
+        </Link>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+
+          <a href="tracklists/" className={styles.card}>
+            <h2>Tracklists &rarr;</h2>
+            <p>View tracks from artists!</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="social/" className={styles.card}>
+            <h2> Socialize with other users&rarr;</h2>
+            <p> View the tracks other users are listening to! </p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="myProfile/"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>My profile &rarr;</h2>
+            <p>View your liked and review tracks!</p>
           </a>
 
           <a
