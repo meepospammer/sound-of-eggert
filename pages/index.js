@@ -29,7 +29,7 @@ export default function Home() {
           </a>
 
           <a href="social/" className={styles.card}>
-            <h2> Socialize with other users&rarr;</h2>
+            <h2> &rarr;</h2>
             <p> View the tracks other users are listening to! </p>
           </a>
 
