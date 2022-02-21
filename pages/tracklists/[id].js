@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
-    const { id } = router.query
+    const { id } = router.query;
     return (<>
         <Head>
           <title> {tracklist.id} by {tracklist.artist} excelling in the {tracklist.genre} genre </title>

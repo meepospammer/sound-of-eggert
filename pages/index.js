@@ -12,11 +12,11 @@ export default function Home() {
 
       <main>
         <h1 className="title page">
-        <Link href='tracklists/college-dropout'>
+        <Link href='tracklists/the-college-dropout'>
            Check out our favorite albums!
         </Link>
         </h1>
-        
+
         <Navbar/>
 
         
