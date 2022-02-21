@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router'
+import Commentsection from '../components/commentsection/commentsection.js';
 
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
@@ -10,14 +11,14 @@ export default function Tracklists({ tracklist }) {
         </Head>
         <main>
           <h1>
-          I love this record: {tracklist.id}
+          {tracklist.artist}: {tracklist.id}
           </h1>
 
           <img src ={tracklist.thumbnail} width = "300px" alt="a picture of our album"/>
         </main>
         <h2>See some Reviews here:</h2>
         <ul>
-            <li>**inject review component for album**</li>
+            <Commentsection/>
         </ul>
     </>)
 }
