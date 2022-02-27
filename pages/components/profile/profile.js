@@ -14,7 +14,7 @@ function Profile(){
              </h1>
          </div>
          <div className={styles.description}>
-             Here's a description of yourself
+             Here's a description of yourself 
          </div>
         </div>
     )

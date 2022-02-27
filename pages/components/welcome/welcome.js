@@ -6,12 +6,18 @@ function Welcome(){
         <box className = {styles.box}>
             <div className={styles.div}>
                 <h1>
-                    Sound of Eggert!
+                    The Sound of Eggert
                 </h1>
-                Welcome to the sound of Eggert project!
-                <br/>
-                Our webapp makes ranking and browsing music easy.
-                <br/>
+                <img src="https://www.shareicon.net/data/2016/08/18/813422_music_512x512.png" alt="note"/>
+                <h1>
+                    Rank your favorite albums
+                </h1>
+                <h1>
+                    Follow world rankings
+                </h1>
+                <h1>
+                    Share your opinions
+                </h1>
                 
             </div>
         </box>
