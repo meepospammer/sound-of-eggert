@@ -85,9 +85,12 @@ export default function Tracklists({ tracklist }) {
             </box>
             <Commentsection/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </>
     )
 =======
+=======
+>>>>>>> b529382 (initial form component and api endpoint)
             <SubmitPost/>
         </ul>
     </>)
