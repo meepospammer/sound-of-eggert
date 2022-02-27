@@ -14,7 +14,7 @@ function ClickableAlbum(){
             <li className={styles.li}>
                 <a className={styles.a}>
                     <h2>
-                    <Link href='/tracklists/the-college-dropout'>
+                    <Link href='/tracklists/gluee'>
                         Bladee: Gluee
                     </Link>
                     </h2>
@@ -23,7 +23,7 @@ function ClickableAlbum(){
             <li className={styles.li}>
                 <a className={styles.a}>
                     <h1>
-                        10
+                        10.0
                     </h1>
                 </a>
             </li>
