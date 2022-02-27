@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router'
 import Commentsection from '../components/commentsection/commentsection.js';
+import SubmitPost from '../components/submitPost/submitPost.js';
 
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
@@ -19,6 +20,7 @@ export default function Tracklists({ tracklist }) {
         <h2>See some Reviews here:</h2>
         <ul>
             <Commentsection/>
+            <SubmitPost/>
         </ul>
     </>)
 }
