@@ -1,0 +1,22 @@
+
+
+.p {
+    outline-style: solid;
+    outline-color: black;
+    text-align: center;
+    width: 600px;
+    height: 100px;
+}
+
+.li {
+    list-style: none;
+    text-align:  left;
+    float: left;
+}
+
+.li a {
+    background-color: white;
+    display: block;
+    font-size:larger;
+    padding: 0px 20px;
+}
