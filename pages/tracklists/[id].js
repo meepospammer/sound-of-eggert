@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { render } from 'react-dom';
 
 var userRating = "Unrated"
+import SubmitPost from '../components/submitPost/submitPost.js';
 
 export default function Tracklists({ tracklist }) {
 
@@ -83,8 +84,14 @@ export default function Tracklists({ tracklist }) {
 
             </box>
             <Commentsection/>
+<<<<<<< HEAD
         </>
     )
+=======
+            <SubmitPost/>
+        </ul>
+    </>)
+>>>>>>> b529382 (initial form component and api endpoint)
 }
 
 
