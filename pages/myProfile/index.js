@@ -1,13 +1,9 @@
 import Link from "next/link";
-
+import Profile from "../components/profile/profile";
 
 export default function ProfileView() {
     return (<>
-        <h1>
-            Welcome Josh!
-            <b/>
-            This is working
-        </h1>
+        <Profile/>
         <Link href="/tracklists">
           View your tracks!
         </Link>

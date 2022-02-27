@@ -11,6 +11,8 @@ function Welcome(){
                 Welcome to the sound of Eggert project!
                 <br/>
                 Our webapp makes ranking and browsing music easy.
+                <br/>
+                
             </div>
         </box>
     )

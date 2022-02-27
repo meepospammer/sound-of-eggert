@@ -1,0 +1,29 @@
+
+
+.gridcontainer {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: 350px 350px 350px;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "image title title"
+        "image text text"
+        "image text text"
+        "image text text"
+
+}
+
+.header {
+    grid-area: title;
+}
+
+.profilepic {
+    text-align: right;
+    grid-area: image;
+    width: 400;
+    height: 500;
+}
+
+.description {
+    grid-area: text;
+}
