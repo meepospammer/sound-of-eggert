@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './navbar.module.css'
 import Link from 'next/link'
+import Searchbar from '../searchbar/searchbar'
 
 function Navbar() {
   return (
@@ -27,6 +28,9 @@ function Navbar() {
             </Link>
           </a>
         </li>
+        <search className={styles.search}>
+          <Searchbar/>
+        </search>
         <li className={styles.li}>
           <a className={styles.a}>
             <Link href='myProfile'>
