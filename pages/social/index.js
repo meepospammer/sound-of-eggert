@@ -1,7 +1,12 @@
+import Rankinglist from '../components/rankinglist/rankinglist.js'
+
 export default function socialView() {
     return (
-        <h1>
-            View your friends and other users!
-        </h1>
+        <>
+            <h1>
+                Global Album Rankings
+            </h1>
+            <Rankinglist/>
+        </>
     )
 }

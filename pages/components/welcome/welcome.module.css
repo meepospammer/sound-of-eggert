@@ -7,6 +7,10 @@
 
 .box div{
     width: 100%;
-    line-height: 40px;
+    line-height: 50px;
 }
 
+.box h1{
+    font-size: 100px;
+    line-height: 100px;
+}

@@ -10,11 +10,6 @@ export default function Home() {
       <div className={styles.container}>
         <main>
           <Welcome/>
-          <h1 className="title page">
-          <Link href='tracklists/the-college-dropout'>
-            Check out our favorite albums!
-          </Link>
-          </h1>
           
         </main>
       </div>
