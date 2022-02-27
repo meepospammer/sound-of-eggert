@@ -1,0 +1,11 @@
+
+.box {
+    background-color: lightgray;
+    display: flex;
+}
+
+.box div{
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
