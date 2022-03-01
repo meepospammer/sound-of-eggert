@@ -1,29 +1,52 @@
 
+.profilebg{
+    display: block;
+    background-color: crimson;
+    width: 635px;
+    padding: 20px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    outline-style: solid;
+    outline-color: black;
+}
 
 .gridcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: white;
     display: grid;
-    padding: 50px;
-    grid-template-columns: 350px 350px 350px;
-    grid-gap: 20px;
+    width: 95%;
+    height: 95%;
+    grid-template-columns: 33% 33% 34%;
+    grid-gap: 0px;
     grid-template-areas: 
         "image title title"
-        "image text text"
-        "image text text"
-        "image text text"
+        "image text  text"
+        "image text  text"
+        "image text  text"
 
 }
 
 .header {
     grid-area: title;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .profilepic {
-    text-align: right;
+    background-color: black;
+    text-align: center;
     grid-area: image;
-    width: 400;
-    height: 500;
+    height: 250px;
+    width: 200px; 
 }
 
 .description {
     grid-area: text;
+    background-color: lightgray;
+    padding: 0px 20px;
+    width: 100%;
 }
