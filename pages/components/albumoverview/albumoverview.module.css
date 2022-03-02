@@ -12,18 +12,15 @@
     height: 100vw/3;
     padding: 0 0;
     margin: 0;
-    display: grid;
     overflow: hidden;
+    display: grid;
     grid-template-columns:  25% 25% 25% 25% 25% 25% 25% 25%;
-    grid-template-rows: 33% 33% 33%;
     grid-template-areas: "img1"
                          "img2"
                          "img3";
 }
 
-.img {
-    background-color: black;
-    grid-area: "img1";
+.ul img {
     width: 100%;
     height: width;
     position: relative;
@@ -31,37 +28,17 @@
     animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    
+}
+
+.imgone {
+    grid-area: "img1";
 }
 
 .imgtwo {
-    background-color: black;
     grid-area: "img2";
-    width: 100%;
-    height: width;
-    position: relative;
-    animation-name: moveleft;
-    animation-duration: 60s;
     animation-direction: reverse;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
 }
 
 .imgthree {
     grid-area: "img3";
-    width: 100%;
-    height: width;
-    position: relative;
-    animation-name: moveleft;
-    animation-duration: 60s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.div {
-    position: relative;
-    animation-name: moveleft;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
 }
