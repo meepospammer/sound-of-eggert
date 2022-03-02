@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router'
 import Commentsection from '../components/commentsection/commentsection.js';
 import SubmitPost from '../components/submitPost/submitPost.js';
-
+/// this file enables dynamic routing for various albums/ tracklists this is one example of displaying dynamic data given user interaction
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
     const { id } = router.query;
@@ -10,6 +10,7 @@ export default function Tracklists({ tracklist }) {
         <Head>
           <title> {tracklist.id} by {tracklist.artist} excelling in the {tracklist.genre} genre </title>
         </Head>
+        
         <main>
           <h1>
           {tracklist.artist}: {tracklist.id}

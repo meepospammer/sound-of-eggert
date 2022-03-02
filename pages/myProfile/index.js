@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+/// this should probably be a page populated by components in '../components' if kept in current routing
 
 export default function ProfileView() {
     return (<>
