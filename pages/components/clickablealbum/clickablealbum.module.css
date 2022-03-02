@@ -4,7 +4,7 @@
     outline-style: solid;
     outline-color: black;
     text-align: center;
-    width: 600px;
+    width: 700px;
     height: 100px;
 }
 
@@ -12,11 +12,43 @@
     list-style: none;
     text-align:  left;
     float: left;
-}
-
-.li a {
     background-color: white;
     display: block;
     font-size:larger;
-    padding: 0px 20px;
+    height: 100px;
+}
+
+.li artist {
+    display: block;
+    padding: 25px 20px;
+    width: 250px;
+    height: 100px;
+    float: left;
+    text-align: left;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.li name {
+    display: block;
+    padding: 25px 20px;
+    width: 250px;
+    height: 100px;
+    float: left;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: white;
+}
+
+.li rating {
+    background-color: lightgray;
+    display: block;
+    height: 100px;
+    width: 100px;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    padding: 25%;
+    outline-style: solid;
+    outline-color: black;
 }

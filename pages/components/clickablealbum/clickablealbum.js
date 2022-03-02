@@ -12,25 +12,22 @@ function ClickableAlbum(props){
                  />
             </li>
             <li className={styles.li}>
-                <a className={styles.a}>
-                    <h2> {props.artist}: </h2>
-                </a>
+                <artist>
+                    {props.artist}
+                    :
+                </artist>
             </li>
             <li className={styles.li}>
-                <a className={styles.a}>
-                    <h2>
+                <name>
                     <Link href='tracklists/gluee'>
                        {props.name}
                     </Link>
-                    </h2>
-                </a>
+                </name>
             </li>
             <li className={styles.li}>
-                <a className={styles.a}>
-                    <h1>
-                        {props.rating}
-                    </h1>
-                </a>
+                <rating>
+                    {props.rating}
+                </rating>
             </li>
         </p>
     )
