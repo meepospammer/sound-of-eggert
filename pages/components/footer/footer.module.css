@@ -1,0 +1,24 @@
+
+.ul {
+    list-style-type: none;
+    width: 100%;
+    position: static;
+    margin: 0;
+    height: 130px;
+    overflow: hidden;
+    background-color: crimson;
+    font-family: Quicksand;
+}
+
+.li {
+    display: block;
+    float: left;
+    color: white;
+    padding: 16px 24px;
+    text-decoration: none;
+    max-width: 600px;
+}
+
+.li:last-child {
+    float: right;
+}

@@ -19,7 +19,7 @@ function ClickableAlbum(props){
             <li className={styles.li}>
                 <a className={styles.a}>
                     <h2>
-                    <Link href='/tracklist/graduation'>
+                    <Link href='tracklists/gluee'>
                        {props.name}
                     </Link>
                     </h2>
