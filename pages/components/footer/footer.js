@@ -25,13 +25,14 @@ function Footer(){
                     </li>
                 </>
             </li>
+            <li className={styles.li}/>
             <li className={styles.li}>
                 <b>
                     Contact us via: <br/>
-                </b>
+                </b> 
                 <Link href="mailto:eliasberner@g.ucla.edu">
                     Email: eliasberner@g.ucla.edu
-                </Link>
+                </Link> 
             </li>
         </ul>
         </>

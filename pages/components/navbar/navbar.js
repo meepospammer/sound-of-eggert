@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
       <ul className={styles.ul}>
-      <li className={styles.li}>
+        <li className={styles.li}>
           <a className={styles.a}>
             <Link href='./' >
               Home
