@@ -13,9 +13,17 @@ function rankinglist(){
              <ClickableAlbum name="Graduation" artist="Ye"
              src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg" rating={8.4}/>
 
+             <ClickableAlbum name="Red Light" artist="Bladee"
+             src="https://upload.wikimedia.org/wikipedia/en/3/3a/Red_Light_Bladee.jpg"
+             rating={7.9}/>
+
              <ClickableAlbum name="Donda" artist="Ye"
              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/1920px-Solid_black.svg.png"
              rating={7.9}/>
+
+            <ClickableAlbum name="MBDTF" artist="Ye"
+             src="https://m.media-amazon.com/images/I/91dHRGIV65L._SL1500_.jpg"
+             rating={6.0}/>
         </ul>
     )
 }
