@@ -35,6 +35,7 @@
 
 .ul img:hover{
     cursor: pointer;
+    filter:brightness(65%)
 }
 
 .imgone {
