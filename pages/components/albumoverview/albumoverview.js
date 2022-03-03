@@ -13,7 +13,7 @@ var srclist = ["https://media.pitchfork.com/photos/60b7947503d100f6ea2f7e4f/1:1/
                 "https://upload.wikimedia.org/wikipedia/en/4/4d/The_life_of_pablo_alternate.jpg",
                 "https://upload.wikimedia.org/wikipedia/en/f/f1/808s_%26_Heartbreak.png",
                 "https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg",
-                "https://media.pitchfork.com/photos/5929a1899d034d5c69bf29ab/1:1/w_600/a2fb43da.jpg"
+                "https://upload.wikimedia.org/wikipedia/commons/b/b0/Yeezus_album_cover.jpg"
                 ];
 var linklist = [   "/tracklists/gluee","/tracklists/graduation", "/tracklists/the-college-dropout", "/tracklists/donda",
                 "/tracklists/gluee","/tracklists/graduation", "/tracklists/the-college-dropout", "/tracklists/donda",
@@ -21,7 +21,7 @@ var linklist = [   "/tracklists/gluee","/tracklists/graduation", "/tracklists/th
 
 
 function Albumoverview(){
-    
+
     var objlist = [];
     for(let i = 0; i < 3; i++){
         var st;

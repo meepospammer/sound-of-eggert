@@ -30,6 +30,10 @@
     animation-iteration-count: infinite;
 }
 
+.ul img:hover{
+    cursor: pointer;
+}
+
 .imgone {
     grid-area: "img1";
 }
