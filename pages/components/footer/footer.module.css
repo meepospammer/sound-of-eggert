@@ -9,15 +9,15 @@
     font-family: Quicksand;
 }
 
-.li {
+.ul li {
     display: block;
     color: white;
-    padding: 16px 24px;
+    padding: 24px 24px;
     text-decoration: none;
     max-width: 600px;
     float: left;
 }
 
-.li:last-child {
+.ul li:last-child {
     float: right;
 }

@@ -11,21 +11,11 @@ function Footer(){
                     <b>
                         Sound of Eggert team:
                     </b>
-                    <li>
-                        Elias
-                    </li>
-                    <li>
-                        Josh
-                    </li>
-                    <li>
-                        Sami
-                    </li>
-                    <li>
-                        Seb
-                    </li>
+                    <div>
+                        Elias <br/> Josh <br/> Sami <br/> Seb
+                    </div>
                 </>
             </li>
-            <li className={styles.li}/>
             <li className={styles.li}>
                 <b>
                     Contact us via: <br/>
