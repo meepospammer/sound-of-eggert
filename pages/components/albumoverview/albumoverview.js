@@ -15,7 +15,7 @@ var srclist = ["https://media.pitchfork.com/photos/60b7947503d100f6ea2f7e4f/1:1/
                 "https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg",
                 "https://upload.wikimedia.org/wikipedia/commons/b/b0/Yeezus_album_cover.jpg"
                 ];
-var linklist = [   "/tracklists/gluee","/tracklists/graduation", "/tracklists/the-college-dropout", "/tracklists/donda",
+var linklist = ["/tracklists/gluee","/tracklists/graduation", "/tracklists/the-college-dropout", "/tracklists/donda",
                 "/tracklists/gluee","/tracklists/graduation", "/tracklists/the-college-dropout", "/tracklists/donda",
                 "/tracklists/gluee","/tracklists/graduation", "/tracklists/the-college-dropout", "/tracklists/donda"];
 
