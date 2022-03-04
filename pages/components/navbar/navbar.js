@@ -31,6 +31,13 @@ function Navbar() {
         <search className={styles.search}>
           <Searchbar/>
         </search>
+        <li className={styles.li}> 
+          <a className={styles.a}>
+            <Link href='myProfile/'>
+              My Profile
+            </Link>
+          </a>
+        </li>
         <li className={styles.li}>
           <a className={styles.a}>
           <a href="/api/auth/login">Login</a>
