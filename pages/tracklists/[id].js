@@ -1,26 +1,38 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router'
 import Commentsection from '../components/commentsection/commentsection.js';
+import styles from './[id].module.css'
 
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
     const { id } = router.query;
-    return (<>
-        <Head>
-          <title> {tracklist.id} by {tracklist.artist} excelling in the {tracklist.genre} genre </title>
-        </Head>
-        <main>
-          <h1>
-          {tracklist.artist}: {tracklist.id}
-          </h1>
+    return (
+        <>
+            <Head>
+            <title> {tracklist.id} by {tracklist.artist} excelling in the {tracklist.genre} genre </title>
+            </Head>
+            <box className={styles.gridcontainer}>
+            <img src ={tracklist.thumbnail} className={styles.image} heigh="300px" width = "300px" alt="a picture of our album"/>
+            
+            <li className={styles.subtitle}>
+                {tracklist.artist} :
+            </li>
 
-          <img src ={tracklist.thumbnail} width = "300px" alt="a picture of our album"/>
-        </main>
-        <h2>See some Reviews here:</h2>
-        <ul>
-            <Commentsection/>
-        </ul>
-    </>)
+            <li className={styles.title}>
+                {tracklist.id}
+            </li>
+
+            <li className={styles.rating}>
+                8.72 / 10
+            </li>
+            
+            </box>
+            <h2>See some Reviews here:</h2>
+            <ul>
+                <Commentsection/>
+            </ul>
+        </>
+    )
 }
 
 
