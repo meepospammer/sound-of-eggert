@@ -14,7 +14,7 @@
 
 .image {
     display: block;
-    grid-row: 1 span 4;
+    grid-row: 1 / span 4;
     grid-column: 1;
     height: 400px;
     width: 400px;
@@ -25,13 +25,13 @@
 .title {
     display: block;
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 2 / span 2;
     text-align: center;
     font-size: 50px;
     font-weight: bolder;
     line-height: 100px;
     border-bottom: solid black;
-    
+    overflow: hidden;
 }
 
 .subtitle {
@@ -43,13 +43,14 @@
     font-weight: bolder;
     text-align: center;
     border-bottom: solid black;
+    overflow: hidden;
 }
 
 .rating {
     display: block;
-    grid-row: 3 span 2;
+    grid-row: 4;
     grid-column: 2;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bolder;
     text-align: center;
 }
