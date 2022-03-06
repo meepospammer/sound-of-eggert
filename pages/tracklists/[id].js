@@ -27,10 +27,7 @@ export default function Tracklists({ tracklist }) {
             </li>
             
             </box>
-            <h2>See some Reviews here:</h2>
-            <ul>
-                <Commentsection/>
-            </ul>
+            <Commentsection/>
         </>
     )
 }
