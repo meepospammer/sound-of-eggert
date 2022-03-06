@@ -8,7 +8,14 @@ var comments = ["I really enjoyed this project! The production was outstanding",
 export default function commentsection() {
   var commentlist = []
   for(let i = 0; i < comments.length; i++){
-    var object = <div> {comments[i]} </div>
+    var object = <div>
+                    <h2>
+                      Username
+                    </h2>
+                    <p>
+                    {comments[i]} 
+                    </p>
+                  </div>
     commentlist.push(object)
   }
   return (
@@ -20,7 +27,7 @@ export default function commentsection() {
         </h1>
       </l>
       <l>
-        <textarea placeholder='Leave a review...' resize="none" type="text"/>
+        <textarea placeholder='Leave a review...' type="text"/>
       </l>
       <l>
         {commentlist}
