@@ -4,6 +4,7 @@
     width: 100%;
     position: static;
     margin: 0;
+    height: 150px;
     overflow: hidden;
     background-color: crimson;
     font-family: Quicksand;

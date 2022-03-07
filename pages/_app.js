@@ -8,8 +8,10 @@ import { UserProvider } from '@auth0/nextjs-auth0';
 function MyApp({ Component, pageProps }) {
   return (
   <UserProvider>
+    <pagecontainer>
     <Navbar/>
     <Component {...pageProps} />
+    </pagecontainer>
     <Footer/>
   </UserProvider>
   )
