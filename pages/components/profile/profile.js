@@ -13,7 +13,7 @@ function Profile(){
         <p className={styles.profilebg}>
             <p className = {styles.gridcontainer}>
             <div className={styles.profilepic}>
-                <img src = {user.picture}
+                <img src = {user.profilepic}
                  alt="pfp"/>
             </div>
             <div className={styles.header}>
