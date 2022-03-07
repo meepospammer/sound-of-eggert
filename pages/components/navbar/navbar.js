@@ -16,14 +16,14 @@ function Navbar() {
         </li>
         <li className={styles.li}>
           <a className={styles.a}>
-            <Link href='tracklists/' >
+            <Link href='/tracklists' >
               Discover Music
             </Link>
           </a>
         </li>
         <li className={styles.li}>
           <a className={styles.a}>
-            <Link href='social/'>
+            <Link href='/social'>
                 Album Rankings
             </Link>
           </a>
@@ -33,7 +33,7 @@ function Navbar() {
         </search>
         <li className={styles.li}> 
           <a className={styles.a}>
-            <Link href='myProfile/'>
+            <Link href='/myProfile'>
               My Profile
             </Link>
           </a>
