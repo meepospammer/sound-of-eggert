@@ -4,6 +4,18 @@ import Link from 'next/link'
 import Searchbar from '../searchbar/searchbar'
 
 function Navbar() {
+
+  //Check if user is logged in depending on this display either login or myprofile
+  var loggedin = false;
+  var authentication
+  if(loggedin){
+    authentication = <a className={styles.a}><Link href='/myProfile'>My Profile</Link></a>
+  }else{
+    authentication = <a className={styles.a}>
+    <a href="/api/auth/login">Login</a>
+    </a>
+  }
+
   return (
     <>
       <ul className={styles.ul}>
@@ -32,16 +44,7 @@ function Navbar() {
           <Searchbar/>
         </search>
         <li className={styles.li}> 
-          <a className={styles.a}>
-            <Link href='/myProfile'>
-              My Profile
-            </Link>
-          </a>
-        </li>
-        <li className={styles.li}>
-          <a className={styles.a}>
-          <a href="/api/auth/login">Login</a>
-          </a>
+          {authentication}
         </li>
       </ul>
     </>
