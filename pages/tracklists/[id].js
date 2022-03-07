@@ -1,31 +1,43 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router'
 import Commentsection from '../components/commentsection/commentsection.js';
+import Pagetitle from '../components/pagetitle/pagetitle.js';
 import styles from './[id].module.css'
 
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
     const { id } = router.query;
+    var ueberschrift = <>{tracklist.artist} : {tracklist.id}</>
     return (
         <>
             <Head>
             <title> {tracklist.id} by {tracklist.artist} excelling in the {tracklist.genre} genre </title>
             </Head>
+            <Pagetitle title={ueberschrift}/>
             <box className={styles.gridcontainer}>
             <img src ={tracklist.thumbnail} className={styles.image} heigh="300px" width = "300px" alt="a picture of our album"/>
             
-            <li className={styles.subtitle}>
-                {tracklist.artist} :
+            <li className={styles.rating1}>
+                <li className={styles.title}>
+                    Community Rating:
+                </li>
+                <li className={styles.subtitle}>
+                    8.72 / 10
+                </li>
             </li>
 
-            <li className={styles.title}>
-                {tracklist.id}
+            <li className={styles.rating2}>
+                <li className={styles.title}>
+                    Your Rating:
+                    <button className={styles.editbutton}>
+                        <img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" heigh="50px" width = "50px"/>
+                    </button>
+                </li>
+                <li className={styles.subtitle}>
+                    8 / 10
+                </li>
             </li>
 
-            <li className={styles.rating}>
-                8.72 / 10
-            </li>
-            
             </box>
             <Commentsection/>
         </>
