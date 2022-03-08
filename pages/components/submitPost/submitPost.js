@@ -11,7 +11,7 @@ export default function submitPost() {
 
         const res = await fetch('/api/submitPost', {
             body: JSON.stringify({
-              name: event.target.name.value
+              comment: event.target.comment.value
             }),
             headers: {
               'Content-Type': 'application/json'
@@ -23,8 +23,8 @@ export default function submitPost() {
      return (
          /// html form in jsx that retreives user input
          <form onSubmit={formHandler}>
-         <label htmlFor="post">Tell the world what you think!</label>
-         <input id="post" name="post" type="text" autoComplete="post" required />
+         <label htmlFor="comment">Tell the world what you think!</label>
+         <input id="comment" name="comment" type="text" autoComplete="comment" required />
          <button type="submit">send your post! </button>
          </form>
 

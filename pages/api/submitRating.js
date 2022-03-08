@@ -1,4 +1,4 @@
-import clientPromise from "../../lib/mongodb"
+import clientPromise from "../../lib/mongodb";
 
 
 export default function handler(req, res) {
@@ -10,7 +10,7 @@ export default function handler(req, res) {
     const db = mongoClient.db("sound_of_eggert_db");
 
     const data = req.body;
-    const post = data.post.insertOne({'user': data.userID, 'text': data.text, 'album': data.albumID, 'date': new Date() },);
+    const post = data.ratings.insertOne({'user': data.userID, 'rating': data.rating, 'album': data.albumID, 'date': new Date() },);
     const album = data.album;
 
     console.log(data);
