@@ -2,23 +2,31 @@ import Head from 'next/head';
 import { useRouter } from 'next/router'
 import Commentsection from '../components/commentsection/commentsection.js';
 import Pagetitle from '../components/pagetitle/pagetitle.js';
-import RateThisAlbum from '../components/ratethisalbum/ratethisalbum.js';
 import styles from './[id].module.css'
+import { useState } from 'react';
+import { render } from 'react-dom';
+
+var userRating = 5
 
 export default function Tracklists({ tracklist }) {
+
     const router = useRouter();
     const { id } = router.query;
     var ueberschrift = <>{tracklist.artist} : {tracklist.id}</>
-    var ratingObj = <> 8/10 </>
+
+    const[rtt, setrtt] = useState(userRating)
 
     function editRating(upvote){
-        ratingObj = <>5/10</>
-        if(upvote == true){
-            console.log('updoot')
+        if(upvote){
+            if(userRating < 10)
+                userRating++
         }
         else{
-            console.log('sadge')
+            if(userRating > 0)
+                userRating--
         }
+        console.log(userRating)
+        setrtt(userRating)
     }
 
     return (
@@ -47,7 +55,7 @@ export default function Tracklists({ tracklist }) {
                     </li>
                     <li className={styles.subtitle}>
                         <div>
-                            8/10
+                            {rtt} / 10
                         </div>
                     </li>
                 </rating2>
