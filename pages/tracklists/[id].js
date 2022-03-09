@@ -7,7 +7,8 @@ import { useState } from 'react';
 import { render } from 'react-dom';
 
 var userRating = "Unrated"
-
+import SubmitPost from '../components/submitPost/submitPost.js';
+/// this file enables dynamic routing for various albums/ tracklists this is one example of displaying dynamic data given user interaction
 export default function Tracklists({ tracklist }) {
 
     const router = useRouter();
@@ -83,8 +84,10 @@ export default function Tracklists({ tracklist }) {
 
             </box>
             <Commentsection/>
+
         </>
     )
+    
 }
 
 

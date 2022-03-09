@@ -20,6 +20,21 @@ export default function commentsection() {
     setinputval('')
   }
 
+  const formHandler = async event => {
+    event.preventDefault()
+
+    const res = await fetch('/api/submitPost', {
+        body: JSON.stringify({
+          comment: event.target.comment.value
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      })
+    }
+
+    
   return (
     <>
     <ul className={styles.container}>
@@ -29,9 +44,11 @@ export default function commentsection() {
         </h1>
       </l>
       <l>
-        <textarea placeholder='Leave a review...' type="text" id="submitcomment"
-         value={inputval} onChange={(e)=>setinputval(e.target.value)}/>
-        <button onClick={handleInput}> Submit </button>
+      <form onSubmit={formHandler}>
+         <label htmlFor="comment">Tell the world what you think!</label>
+         <input id="comment" name="comment" type="text" autoComplete="comment" required />
+         <button type="submit">send your post! </button>
+         </form>
       </l>
       <l id="up">
         {commentlist.comments}
