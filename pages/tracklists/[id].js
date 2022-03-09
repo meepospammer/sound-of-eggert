@@ -6,7 +6,7 @@ import styles from './[id].module.css'
 import { useState } from 'react';
 import { render } from 'react-dom';
 
-var userRating = 5
+var userRating = "Unrated"
 
 export default function Tracklists({ tracklist }) {
 
@@ -18,12 +18,18 @@ export default function Tracklists({ tracklist }) {
 
     function editRating(upvote){
         if(upvote){
-            if(userRating < 10)
+            if(userRating == "Unrated"){
+                userRating = 0
+            }
+            else if(userRating < 10)
                 userRating++
         }
         else{
-            if(userRating > 0)
+            if(userRating > -1)
                 userRating--
+            if(userRating == -1){
+                userRating = "Unrated"
+            }
         }
         console.log(userRating)
         setrtt(userRating)
