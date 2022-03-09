@@ -17,6 +17,8 @@ export default async function handler(req, res) {
     /// destructure request
     const document = {
       'user': data.userID,
+      'type': 'comment',
+      'albumID': 'need album here:)',
       'text': data.comment, 
       'date': new Date() };
 
