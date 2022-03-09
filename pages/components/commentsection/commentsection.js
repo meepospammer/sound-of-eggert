@@ -45,8 +45,7 @@ export default function commentsection() {
       </l>
       <l>
       <form onSubmit={formHandler}>
-         <label htmlFor="comment">Tell the world what you think!</label>
-         <input id="comment" name="comment" type="text" autoComplete="comment" required />
+         <textarea id="comment" name="comment" type="text" placeholder="Tell the world what you think!" autoComplete="comment" required />
          <button type="submit">send your post! </button>
          </form>
       </l>
