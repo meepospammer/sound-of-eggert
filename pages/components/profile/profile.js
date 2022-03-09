@@ -8,12 +8,16 @@ function Profile(){
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>{error.message}</div>;
-
+    //issues and things to add:
+    //profile picture doesnt work, usually will be wrong size
+        // might be better to just scrap profile pictures
+    //let users write a small description
+    //have users posts at the bottom?
     return(
         <p className={styles.profilebg}>
             <p className = {styles.gridcontainer}>
             <div className={styles.profilepic}>
-                <img src = {user.profilepic}
+                <img src = {user.picture}
                  alt="pfp"/>
             </div>
             <div className={styles.header}>

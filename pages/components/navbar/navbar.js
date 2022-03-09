@@ -2,18 +2,17 @@ import React from 'react';
 import styles from './navbar.module.css'
 import Link from 'next/link'
 import Searchbar from '../searchbar/searchbar'
+import { useUser } from '@auth0/nextjs-auth0';
+
 
 function Navbar() {
-
-  //Check if user is logged in depending on this display either login or myprofile
-  var loggedin = false;
+  const { user } = useUser();
+  
   var authentication
-  if(loggedin){
+  if(user){
     authentication = <a className={styles.a}><Link href='/myProfile'>My Profile</Link></a>
   }else{
-    authentication = <a className={styles.a}>
-    <a href="/api/auth/login">Login</a>
-    </a>
+    authentication = <a className={styles.a}><a href="/api/auth/login">Login</a></a>
   }
 
   return (
