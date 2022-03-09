@@ -4,26 +4,23 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-column-gap: 40px;
-    grid-row-gap: 10px;
-    width: 840px;
+    grid-template-columns: 400px 400px 100px;
+    grid-template-rows: 180px 180px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    width: 980px;
     height: 400px;
 }
 
 .gridcontainer li{
-    display: block;
     text-align: center;
-    font-size: 40px;
-    font-weight: bolder;
+    list-style: none;
     line-height: 100px;
-    overflow: hidden;
 }
 
 .image {
     display: block;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 2;
     grid-column: 1;
     height: 400px;
     width: 400px;
@@ -31,26 +28,34 @@
     outline: solid black;
 }
 
-.rating1 {
+.gridcontainer rating1 {
     height: 180px;
-    grid-column: 2;
-    grid-row: 1 / span 2;
+    width: 525px;
+    grid-column: 2 /span2;
+    grid-row: 1;
+}
+
+.gridcontainer rating2 {
+    height: 200px;
+    grid-column: 2 / span 1;
+    grid-row: 2;
     border-radius: 10px;
 }
 
-.rating2 {
-    height: 180px;
-    grid-column: 2;
-    grid-row: 3 / span 2;
-    border-radius: 10px;
+.gridcontainer buttonsection {
+    grid-row: 2;
+    grid-column: 3;
+    height:fit-content;
+    width: 100px;
+    padding: 0 0;
 }
 
 .title {
-    font-size: 50px;
     height: 50%;
+    font-size: 40px;
+    font-weight: 800;
     background-color: crimson;
     color: white;
-    
 }
 
 .subtitle {
@@ -58,26 +63,34 @@
     font-size: 50px;
     text-align: center;
     background-color: lightgray;
+    font-weight:800;
 }
 
-.editbutton {
-    float:right;
-    width: 50px;
-    height: 50px;
-    padding: 0 0;
-    margin: 25px 10px;
-    background-color: inherit;
-    border: hidden;
+.subtitle div{
+    display: block;
 }
 
-.editbutton :hover{
-    background-color: lightcoral;
+.gridwrapper{
+    border-radius: 10px;
 }
 
+.updatebutton {
+    display: block;
+    height: 100px;
+    width: 100px;
+    padding: 0 0; 
+    border: none;
+    background-color: white;
+}
+
+.updatebutton :hover{
+    cursor: pointer;
+    background-color: crimson;
+}
 
 .image {
     display: block;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 2;
     grid-column: 1;
     height: 400px;
     width: 400px;
