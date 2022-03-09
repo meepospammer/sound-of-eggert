@@ -80,7 +80,7 @@
     width: 100px;
     padding: 0 0; 
     border: none;
-    background-color: white;
+    background-color: lightgray;
 }
 
 .updatebutton :hover{

@@ -17,6 +17,7 @@ export default function Tracklists({ tracklist }) {
     const[rtt, setrtt] = useState(userRating)
 
     function editRating(upvote){
+        var outof = " / 10"
         if(upvote){
             if(userRating == "Unrated"){
                 userRating = 0
@@ -29,10 +30,11 @@ export default function Tracklists({ tracklist }) {
                 userRating--
             if(userRating == -1){
                 userRating = "Unrated"
+                outof = ""
             }
         }
         console.log(userRating)
-        setrtt(userRating)
+        setrtt(userRating + outof)
     }
 
     return (
@@ -61,7 +63,7 @@ export default function Tracklists({ tracklist }) {
                     </li>
                     <li className={styles.subtitle}>
                         <div>
-                            {rtt} / 10
+                            {rtt}
                         </div>
                     </li>
                 </rating2>
