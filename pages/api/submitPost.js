@@ -1,26 +1,35 @@
 import clientPromise from "../../lib/mongodb"
 
 
-export default function handler(req, res) {
-    /// **Todo** change this function to talk to our mongodb database and create new post
+export default async function handler(req, res) {
   
 
     //connect to mongo instance 
     const mongoClient = await clientPromise;
+    await mongoClient.connect();
+
     const db = mongoClient.db("sound_of_eggert_db");
+    const posts = db.collection("posts");
 
     const data = req.body;
-    const post = data.post.insertOne({'user': data.userID, 'text': data.text, 'album': data.albumID, 'date': new Date() },);
-    const album = data.album;
 
-    console.log(data);
+
+    /// destructure request
+    const document = {
+      'user': data.userID,
+      'text': data.comment, 
+      'date': new Date() };
+
+    const insert = await posts.insertOne(document);
+    /// insert post to db connection
+
+
     //destructure the request json
 
 
     //response
 
     res.status(200).json()
-    console.log(data)
 
 
 
