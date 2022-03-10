@@ -10,3 +10,19 @@
     padding: 10px;
     outline: none;
 }
+
+.btn {
+    display: block;
+    height: 45px;
+    float: right;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: inherit;
+    color: black;
+    background-color: white;
+    font-style: bold;
+}
+
+.btn:hover{
+    background-color: lightgray;
+}

@@ -8,8 +8,12 @@ function Searchbar(){
                 type='text'
                 placeholder='Search for your favorite music...'
                 className={styles.input}
-            
+                
             />
+            <button className={styles.btn}>
+                Search
+            </button>
+            
         </>
     )
 }
