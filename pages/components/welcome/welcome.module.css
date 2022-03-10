@@ -1,0 +1,16 @@
+
+.box {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+
+.box div{
+    width: 100%;
+    line-height: 50px;
+}
+
+.box h1{
+    font-size: 100px;
+    line-height: 100px;
+}

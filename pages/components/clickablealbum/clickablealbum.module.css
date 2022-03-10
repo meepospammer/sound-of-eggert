@@ -1,0 +1,55 @@
+
+
+.p {
+    outline-style: solid;
+    outline-color: black;
+    text-align: center;
+    width: 700px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.li {
+    list-style: none;
+    text-align:  left;
+    float: left;
+    background-color: white;
+    display: block;
+    font-size:larger;
+    height: 100px;
+}
+
+.li artist {
+    display: block;
+    padding: 25px 20px;
+    width: 250px;
+    height: 100px;
+    float: left;
+    text-align: left;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.li name {
+    display: block;
+    padding: 25px 20px;
+    width: 250px;
+    height: 100px;
+    float: left;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: white;
+}
+
+.li rating {
+    background-color: lightgray;
+    display: block;
+    height: 100px;
+    width: 100px;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    padding: 25%;
+    outline-style: solid;
+    outline-color: black;
+}

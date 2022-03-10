@@ -1,0 +1,52 @@
+@keyframes moveleft {
+    0% {left:0px; top:0px;}
+    25% {left: -100%; top:0px;}
+    50% {left: -200%; top:0px;}
+    75% {left: -300%; top:0px;}
+    100% {left: -400%; top:0px;}
+}
+
+
+.ul {
+    outline: solid black;
+    width: 100%;
+    height: 100vw/3;
+    padding: 0 0;
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25% 25% 25% 25% 25%;
+    grid-template-areas: "img1"
+                         "img2"
+                         "img3";
+}
+
+.ul img {
+    background-color: black;
+    padding: 2px 2px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation-name: moveleft;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.ul img:hover{
+    cursor: pointer;
+    filter:brightness(65%)
+}
+
+.imgone {
+    grid-area: "img1";
+}
+
+.imgtwo {
+    grid-area: "img2";
+    animation-direction: reverse;
+}
+
+.imgthree {
+    grid-area: "img3";
+}

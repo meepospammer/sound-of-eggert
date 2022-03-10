@@ -1,0 +1,60 @@
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    padding: 0 0;
+    text-align: center;
+}
+
+.container l{
+    display: block;
+    width: 100%;
+    margin: 25px 0px;
+}
+
+.container h1 {
+    background-color: crimson;
+    color: white;
+    margin-top: 50px;
+    padding: 20px 0px;
+}
+
+.container textarea{
+    width: 90%;
+    resize: none;
+    height: 50px;
+    outline: solid black 1px;
+    padding: 10px 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: medium;
+    float: left;
+}
+
+.container button{
+    display: block;
+    width: 10%;
+    height: 50px;
+    outline: solid black 1px;
+}
+
+.container div{
+    text-align: left;
+    background-color: lightgray;
+    
+}
+
+.container h2{
+    background-color: crimson;
+    padding: 5px 5px;
+    color: white;
+    font-style: bold;
+    font-size: medium;
+}
+
+.container p{
+    margin-top: 0px;
+    padding: 15px 10px;
+}

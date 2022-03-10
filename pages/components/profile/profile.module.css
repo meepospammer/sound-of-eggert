@@ -1,0 +1,76 @@
+
+.profilebg{
+    display: block;
+    background-color: crimson;
+    width: 635px;
+    padding: 20px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.gridcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: white;
+    display: grid;
+    width: 95%;
+    height: 95%;
+    grid-template-columns: 33% 33% 34%;
+    grid-gap: 0px;
+    grid-template-areas: 
+        "image title title"
+        "image text  text"
+        "image text  text"
+        "image text  text"
+
+}
+
+.header {
+    grid-area: title;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.profilepic {
+    background-color: black;
+    text-align: center;
+    grid-area: image;
+    height: 250px;
+    width: 200px; 
+}
+
+.description {
+    grid-area: text;
+    background-color: lightgray;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+
+/* copied from navbar css */
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    overflow: hidden;
+    background-color: crimson;
+    font-family: Quicksand;
+  }
+  
+.li {
+    float: left;
+  }
+  
+.li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    text-decoration: none;
+  }
