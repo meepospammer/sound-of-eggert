@@ -40,8 +40,9 @@
     background-color: black;
     text-align: center;
     grid-area: image;
-    height: 250px;
-    width: 200px; 
+    height: 200px;
+    width: 100%; 
+    display: flex;
 }
 
 .description {
