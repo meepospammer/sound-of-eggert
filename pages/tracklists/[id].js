@@ -15,7 +15,12 @@ export default function Tracklists({ tracklist }) {
     const { id } = router.query;
     var ueberschrift = <>{tracklist.artist} : {tracklist.id}</>
 
+    var initialRating = 5
+    var peopleWhoRatedThisAlbum = 10
+
     const[rtt, setrtt] = useState(userRating)
+
+    const[communityRating, setcommunityRating] = useState(initialRating)
 
     function editRating(upvote){
         var outof = " / 10"
@@ -29,12 +34,16 @@ export default function Tracklists({ tracklist }) {
         else{
             if(userRating > -1)
                 userRating--
+                
             if(userRating == -1){
                 userRating = "Unrated"
                 outof = ""
             }
         }
-        console.log(userRating)
+        console.log(userRating)             //TODO: Update rating and push new user rating to db
+        if(userRating != "Unrated"){
+            setcommunityRating((((initialRating * peopleWhoRatedThisAlbum) + userRating)/(peopleWhoRatedThisAlbum + 1)).toFixed(2))
+        }
         setrtt(userRating + outof)
     }
 
@@ -53,7 +62,7 @@ export default function Tracklists({ tracklist }) {
                     </li>
                     <li className={styles.subtitle}>
                         <div>
-                        8.72 / 10
+                            {communityRating}
                         </div>
                     </li>
                 </rating1>
