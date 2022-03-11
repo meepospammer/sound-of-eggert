@@ -14,10 +14,10 @@ import SubmitPost from '../components/submitPost/submitPost.js';
 export default function Tracklists({ tracklist }) {
     const router = useRouter();
     const { id } = router.query;
-    var ueberschrift = <>{tracklist.artist} : {tracklist.id}</>
+    var ueberschrift = <>{tracklist.Artist} : {tracklist.title}</>
 
-    var initialRating = 8.21
-    var peopleWhoRatedThisAlbum = 10
+    var initialRating = tracklist.rating
+    var peopleWhoRatedThisAlbum = 50
     var initialUserRating = "Unrated"
     
 
