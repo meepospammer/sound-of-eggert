@@ -2,15 +2,6 @@
 
 The Sound of Eggert is a fully web-based forum focused on reviewing and discussing music albums.  
 
-
-## Team members
-
-Elias Berner
-Josh Koh
-Sami Hamide
-Sebastian Gonzalez
-
-
 ## Installation
 
 After cloning the repository, navigate into your root directory and run:
@@ -33,3 +24,10 @@ The project should be hosted on http://localhost:3000 by default.
 
 The APIs we used were mongodb and auth0.
 
+
+## Team members
+
+Elias Berner<br>
+Josh Koh<br>
+Sami Hamide<br>
+Sebastian Gonzalez<br>
