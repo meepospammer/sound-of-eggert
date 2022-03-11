@@ -12,8 +12,12 @@ function Searchbar(){
     function handleClick(e){                               
         console.log(inputval)
         document.getElementById('search').value= ''
+        
+        //hopefully stores data in session storage?
+        // can be retrieved by sessionStorage.getItem("Key");
+        sessionStorage.setItem("search", inputval);
+        location.href = "./searchpage"
     }
-
 
     return(
         <>
@@ -27,7 +31,6 @@ function Searchbar(){
             <button className={styles.btn} onClick={handleClick}>
                 Search
             </button>
-            
         </>
     )
 }

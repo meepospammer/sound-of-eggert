@@ -1,8 +1,8 @@
-import { CURSOR_FLAGS } from "mongodb";
+import { CURSOR_FLAGS, ExplainVerbosity, MongoBatchReExecutionError } from "mongodb";
 import clientPromise from "../../lib/mongodb"
 
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
 
     // req = { current expected request to query albums
     //     'amount': int,
@@ -10,19 +10,55 @@ export default function handler(req, res) {
     //     'filter': flag field, only 'top' enabled giving top 10 highest rated albums
     //     ...
     // }
+    const FILTER_ENUM = 4;
 
     const mongoClient = await clientPromise;
-    const db = mongoClient.db("sound_of_eggert_db");
+    await mongoClient.connect();
+    //connecting to mongo instance
 
+    const db = mongoClient.db("sound_of_eggert_db");
+    const albums = db.collection("tracklists");
+
+    
     const data = req.body;
 
-    console.log(data);
+    //server side query is destructured for processing
+    ///sample request
 
-    const vals = db.albums.find({});
+    ///replace references to name doc with data once body can be accepted
+    const doc = {
+      'amount': data.amount,
+      'order': data.order,
+      'filter': data.filter
+    }
 
-    const goodMusic = db.albums
-      .find({ ratings: { $gte: 6 } });
+    
+
+    /// structure query docuemtn for albums requested
+    const query = (doc.filter == 'top') ?  {rating: { $gte: FILTER_ENUM}} : {};
+ 
+
+    
+
+    ///response from database as promised
+    const cursor = await albums.find(query)
+      .sort({ rating: doc.order })
+      .limit(doc.amount);
+
+    ///get data failed!
+    if ((await cursor.count()) === 0) {
+
+      console.log("No documents found!");
+      throw MongoBatchReExecutionError;
+      
+
+    }
 
 
-    res.status(200).json({ name: 'John Doe' })
+    const albumArray = await cursor.toArray();
+    ///sends our data to array
+  
+    //respond to client wiht requested album information
+    ///yes... this needs to use dot stringify
+    res.status(200).json(JSON.stringify(albumArray));
   }

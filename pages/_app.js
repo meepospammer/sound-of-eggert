@@ -5,14 +5,16 @@ import Footer from './components/footer/footer'
 import React from 'react';
 import { UserProvider } from '@auth0/nextjs-auth0';
 
+
 function MyApp({ Component, pageProps }) {
+
   return (
   <UserProvider>
     <pagecontainer>
     <Navbar/>
-    <Component {...pageProps} />
+      <Component {...pageProps} />
     </pagecontainer>
-    <Footer/>
+  <Footer/>
   </UserProvider>
   )
 }
