@@ -3,10 +3,11 @@ import Pagetitle from '../components/pagetitle/pagetitle'
 import Albumoverview from '../components/albumoverview/albumoverview'
 
 
-export default function TrackLibrary({isConnected}) {
+export default function TrackLibrary({albums}) {
+  console.log(albums.length)
     return (<>
         <Pagetitle title="Discover New Albums"/>
-        <Albumoverview/>
+        <Albumoverview albums={albums}/>
         
     </>)
 }
@@ -17,21 +18,24 @@ export default function TrackLibrary({isConnected}) {
 // this will determine that we are connected to our data source and only render albums that exist in our data
 
 export async function getServerSideProps(context) {
-    try {
-      // client.db() will be the default database passed in the MONGODB_URI
-      // You can change the database by calling the client.db() function and specifying a database like:
-      // const db = client.db("myDatabase");
-      // Then you can execute queries against your database like so:
-      // db.find({}) or any of the MongoDB Node Driver commands
-      await clientPromise
-      return {
-        props: { isConnected: true },
-      }
-    } catch (e) {
-      console.error(e)
-      return {
-        props: { isConnected: false },
-      }
-    }
+
+
+  ///example ping to get albums api, 
+
+  const body = {'amount': 100, 'order' : -1, 'filter': "top"}
+  const res = await fetch('http://localhost:3000/api/getAlbums', {
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(body)
+      })
+  
+  ///process albums for this page as json this is needed for props!
+  const albums = await res.json();
+
+  return {
+      props: {albums}
   }
+}
   
