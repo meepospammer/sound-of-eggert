@@ -4,10 +4,19 @@ The Sound of Eggert is a fully web-based forum focused on reviewing and discussi
 
 ## Installation
 
-After cloning the repository, run:
+After cloning the repository, navigate into your root directory and run:
 ```bash
-sudo delete system32
+npm install
 ```
+
+## Launching the Project
+
+To launch the project, navigate into your root directory and run:
+```bash
+npm run dev
+```
+
+The project should be hosted on http://localhost:3000 by default.
 
 ## APIs 
 
