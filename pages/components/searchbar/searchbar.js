@@ -16,7 +16,7 @@ function Searchbar(){
         //hopefully stores data in session storage?
         // can be retrieved by sessionStorage.getItem("Key");
         sessionStorage.setItem("search", inputval);
-        location.href = "./searchpage"
+        location.href = "/searchpage"
     }
 
     return(
