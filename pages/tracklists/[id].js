@@ -6,6 +6,8 @@ import styles from './[id].module.css'
 import { useState } from 'react';
 import { render } from 'react-dom';
 
+import clientPromise from "../../lib/mongodb"
+
  //Update this variable to pull the user's rating for this album
 import SubmitPost from '../components/submitPost/submitPost.js';
 /// this file enables dynamic routing for various albums/ tracklists this is one example of displaying dynamic data given user interaction
@@ -58,11 +60,11 @@ export default function Tracklists({ tracklist }) {
     return (
         <>
             <Head>
-            <title> {tracklist.id} by {tracklist.artist} excelling in the {tracklist.genre} genre </title>
+            <title> {tracklist.title} by {tracklist.Artist} excelling in the {tracklist.genre} genre </title>
             </Head>
             <Pagetitle title={ueberschrift}/>
             <box className={styles.gridcontainer}>
-                <img src ={tracklist.thumbnail} className={styles.image} heigh="300px" width = "300px" alt="a picture of our album"/>
+                <img src ={tracklist.img_src} className={styles.image} heigh="300px" width = "300px" alt="a picture of our album"/>
                 
                 <rating1>
                     <li className={styles.title}>
@@ -108,32 +110,76 @@ export default function Tracklists({ tracklist }) {
 }
 
 
-export async function getStaticProps({ params }) {
-    const req = await fetch(`http://localhost:3000/${params.id}.json`);
-    const data = await req.json();
+// export async function getStaticProps({ params }) {
+//     const req = await fetch(`http://localhost:3000/${params.id}.json`);
+//     const data = await req.json();
 
-    return {
-            props: {tracklist: data},
+//     return {
+//             props: {tracklist: data},
 
-        }
+//         }
     
-}
+// }
+
+// This gets called on every request
+export async function getServerSideProps({ params }) {
+    // Fetch data from external API
+  
+    // Pass data to the page via props
+    
+    const mongoClient = await clientPromise;
+    await mongoClient.connect();
+
+    const db = mongoClient.db("sound_of_eggert_db");
+    const albums = db.collection("tracklists");
+
+    const albumName = params.id
+
+    const docQuery = {
+        'title': albumName
+    }
+
+    const cursor = await albums.find(docQuery).limit(1);
+    
+
+    const count = await cursor.count();
+    console.log(count);
+    if (count == 0) {
+        console.log("no album found!");
+    }
+
+    const result = await cursor.toArray();
+
+
+
+
+
+    const data = result[0];
+    const realData = JSON.parse(JSON.stringify(data));
+
+    console.log(realData, "we got comamnder data");
+    return { props: { tracklist: realData } }
+
+
+
+
+  }
 /**
  * get static paths tells next js what routes should be handled by this component, we implment this function with logic that passes props to our react component to render dynamic
  */
-export async function getStaticPaths({ params }) {
-    const req = await fetch('http://localhost:3000/recordings.json');
-    const data = await req.json();
+// export async function getStaticPaths({ params }) {
+//     const req = await fetch('http://localhost:3000/recordings.json');
+//     const data = await req.json();
 
-    const paths = data.map(tracklist => {
-        return { params: { id: tracklist } }
-    })
+//     const paths = data.map(tracklist => {
+//         return { params: { id: tracklist } }
+//     })
 
-    return {
-        paths, 
-        fallback: false
-    };
-}
+//     return {
+//         paths, 
+//         fallback: false
+//     };
+// }
 /// getStaticPaths tells next js what routes should be handled by this component, we implemnt this function with that logic
 /* export async function getStaticPaths() {
     
