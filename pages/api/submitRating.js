@@ -16,9 +16,8 @@ export default function handler(req, res) {
         const doc = {
           'user': data.userID,
           'type': 'rating',
-          'ratingVal': data.rating,
-          'album':data.albumID,
-          'date': new Date(),
+          'albumID': data.albumID,
+          'rating': data.rating,
         }
 
 
