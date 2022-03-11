@@ -22,9 +22,6 @@ export default function searchView({albums}) {
     var renderThese = []
     if(albums != ""){
         let obj = albums.find(obj => obj.title === query)
-        console.log("this is albums:")
-        console.log({search})
-        console.log(obj)
         if(obj != undefined){
         var renderobj = <ClickableAlbum name={obj.title} artist={obj.Artist} src={obj.img_src}
                     rating={obj.rating} link={"/tracklists/" +obj.title}/>
@@ -34,7 +31,7 @@ export default function searchView({albums}) {
     
     return (
         <>
-            <Pagetitle title={search} />
+            <Pagetitle title={"Search results for: " + search} />
             <ul className={styles.ul}>
                 {renderThese}
             </ul>
