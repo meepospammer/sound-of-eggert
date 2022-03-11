@@ -6,24 +6,31 @@ import styles from './[id].module.css'
 import { useState } from 'react';
 import { render } from 'react-dom';
 
-var userRating = "Unrated"
+ //Update this variable to pull the user's rating for this album
 import SubmitPost from '../components/submitPost/submitPost.js';
 /// this file enables dynamic routing for various albums/ tracklists this is one example of displaying dynamic data given user interaction
 export default function Tracklists({ tracklist }) {
-
     const router = useRouter();
     const { id } = router.query;
     var ueberschrift = <>{tracklist.artist} : {tracklist.id}</>
 
-    var initialRating = 5
+    var initialRating = 8.21
     var peopleWhoRatedThisAlbum = 10
+    var initialUserRating = "Unrated"
+    
 
-    const[rtt, setrtt] = useState(userRating)
+    const[rtt, setrtt] = useState(initialUserRating)
 
     const[communityRating, setcommunityRating] = useState(initialRating)
 
+    var outof = " / 10"
+    if(rtt == "Unrated"){
+        outof = ''
+    }
+
     function editRating(upvote){
-        var outof = " / 10"
+        var userRating = rtt
+        
         if(upvote){
             if(userRating == "Unrated"){
                 userRating = 0
@@ -37,14 +44,15 @@ export default function Tracklists({ tracklist }) {
                 
             if(userRating == -1){
                 userRating = "Unrated"
-                outof = ""
             }
         }
         console.log(userRating)             //TODO: Update rating and push new user rating to db
         if(userRating != "Unrated"){
             setcommunityRating((((initialRating * peopleWhoRatedThisAlbum) + userRating)/(peopleWhoRatedThisAlbum + 1)).toFixed(2))
+        }else{
+            setcommunityRating(initialRating)
         }
-        setrtt(userRating + outof)
+        setrtt(userRating)
     }
 
     return (
@@ -73,7 +81,7 @@ export default function Tracklists({ tracklist }) {
                     </li>
                     <li className={styles.subtitle}>
                         <div>
-                            {rtt}
+                            {rtt} {outof}
                         </div>
                     </li>
                 </rating2>

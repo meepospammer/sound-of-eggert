@@ -16,12 +16,13 @@ export default function commentsection() {
   function handleInput(e) {
     comments.push(inputval)
     createComments(commentlist)
-    document.getElementById('submitcomment').value= ''
+    document.getElementById('comment').value= ''
     setinputval('')
   }
 
   const formHandler = async event => {
     event.preventDefault()
+    handleInput(event)
 
     const res = await fetch('/api/submitPost', {
         body: JSON.stringify({
@@ -45,9 +46,10 @@ export default function commentsection() {
       </l>
       <l>
       <form onSubmit={formHandler}>
-         <textarea id="comment" name="comment" type="text" placeholder="Tell the world what you think!" autoComplete="comment" required />
+         <textarea id="comment" name="comment" type="text" placeholder="Tell the world what you think!"
+          onChange={(e)=>setinputval(e.target.value)} autoComplete="comment" required />
          <button type="submit">send your post! </button>
-         </form>
+          </form>
       </l>
       <l id="up">
         {commentlist.comments}
@@ -72,6 +74,3 @@ function createComments(commentlist){
   }
   return; 
 }
-
-
-
