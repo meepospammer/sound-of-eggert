@@ -1,11 +1,12 @@
 import Rankinglist from '../components/rankinglist/rankinglist.js'
 import Pagetitle from '../components/pagetitle/pagetitle.js'
 
-export default function socialView() {
+export default function socialView({albums}) {
+    console.log(albums)
     return (
         <>
             <Pagetitle title="Global Album Rankings:"/>
-            <Rankinglist/>
+            <Rankinglist albums={albums}/>
         </>
     )
 }
