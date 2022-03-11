@@ -22,7 +22,8 @@ The project should be hosted on http://localhost:3000 by default.
 
 ## APIs 
 
-The APIs we used were mongodb and auth0.
+* Auth0 - used to allow users to have individual and authenticated accounts
+* Mongodb - used to store albums, user comments, and other information
 
 
 ## Team members
