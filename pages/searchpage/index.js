@@ -3,7 +3,6 @@ import ClickableAlbum from "../components/clickablealbum/clickablealbum";
 import Pagetitle from "../components/pagetitle/pagetitle";
 import styles from "./searchpage.module.css"
 
-import { appConsumer } from "../../contexts/appContext";
 
 var searchResults = [["album name", "artist", "https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg", 8.6 , "tracklists/gluee"]]
 //searchResults is an array containing arrays containing: Album name, artist, img src, rating, page link
