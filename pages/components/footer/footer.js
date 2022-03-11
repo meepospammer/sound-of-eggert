@@ -12,7 +12,7 @@ function Footer(){
                         Sound of Eggert team:
                     </b>
                     <div>
-                        Elias <br/> Josh <br/> Sami <br/> Seb
+                        Elias Berner<br/> Josh Koh<br/> Sami Hamide<br/> Sebastian Gonzalez
                     </div>
                 </>
             </li>
@@ -22,6 +22,15 @@ function Footer(){
                 </b> 
                 <Link href="mailto:eliasberner@g.ucla.edu">
                     Email: eliasberner@g.ucla.edu
+                </Link> <br/>
+                <Link href="mailto:jishkoh@g.ucla.edu">
+                    Email: jishkoh@g.ucla.edu
+                </Link> <br/>
+                <Link href="mailto:samihamide@g.ucla.edu">
+                    Email: samihamide@g.ucla.edu
+                </Link> <br/>
+                <Link href="mailto:sebastiangonzalez@g.ucla.edu">
+                    Email: sebastiangonzalez@g.ucla.edu
                 </Link> 
             </li>
         </ul>

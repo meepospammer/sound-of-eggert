@@ -10,15 +10,15 @@ function Welcome(){
                     The Sound of Eggert
                 </h1>
                 
-                <h2>
+                <h4>
                     Rate your favorite albums
-                </h2>
-                <h2>
+                </h4>
+                <h4>
                     Follow world rankings
-                </h2>
-                <h2>
+                </h4>
+                <h4>
                     Share your opinions
-                </h2>
+                </h4>
                 
             </div>
             <img src="https://www.shareicon.net/data/2016/08/18/813422_music_512x512.png" alt="note"
