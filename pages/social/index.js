@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
 
     ///example ping to get albums api, 
 
-    const body = {'amount': 10, 'order' : -1, 'filter': "top"}
+    const body = {'amount': 100, 'order' : -1, 'filter': "top"}
     const res = await fetch('http://localhost:3000/api/getAlbums', {
         headers: {
             'Content-Type': 'application/json'
