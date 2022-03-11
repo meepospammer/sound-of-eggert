@@ -1,11 +1,14 @@
-Cloning the Repo
+# The Sound Of Eggert
 
-NPM install
+The Sound of Eggert is a fully web-based forum focused on reviewing and discussing music albums.  
 
-API's we used are next.js, mongo.db, auth0, react
+## Installation
 
-next.js and react are frontend
-mongo.db is backend
-auth0 is for login
+After cloning the repository, run:
+```bash
+sudo delete system32
+```
 
-npm dev run
+## APIs 
+
+The APIs we used were nextjs, mongodb, auth0, and reactjs.
