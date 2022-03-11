@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ClickableAlbum from "../components/clickablealbum/clickablealbum";
 import Pagetitle from "../components/pagetitle/pagetitle";
 import styles from "./searchpage.module.css"

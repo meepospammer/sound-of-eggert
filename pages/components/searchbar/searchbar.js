@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './searchbar.module.css'
 import { useState } from 'react';
 
