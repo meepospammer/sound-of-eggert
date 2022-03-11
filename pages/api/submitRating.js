@@ -21,7 +21,17 @@ export default function handler(req, res) {
         }
 
 
-      const insert = await posts.insertOne(doc);
+      
+
+        const options = {
+          upsert: true
+        }
+
+        const update = {
+          $set: {'user': data.userID, 'rating': data.rating}
+        }
+
+      const insert = await posts.updateOne(doc,update,options);
 
       res.status(200).json()
       console.log(data.body)
